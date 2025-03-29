@@ -1,0 +1,113 @@
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  .subtitles {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .text-boxes {
+    font-size: 42px;
+    text-align: center;
+  }
+  .cards {
+    height: 600px;
+  }
+  @media (max-width: 640px) {
+    .cards {
+      height: 300px;
+    }
+    .text-boxes {
+      font-size: 32px;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  @media (max-width: 375px) {
+    .text-boxes {
+      font-size: 24px; 
+      padding: 8px;
+    }
+    .cards {
+      height: 250px; 
+    }
+    .text-boxes p {
+      font-size: 18px;
+    }
+  }
+  .bg-1 {
+    background-color: #B82025;
+  }
+  .bg-2 {
+    background-color: #20313F;
+  }
+  @media (min-width: 1024px) {
+    .cards:nth-last-child(1) {
+      background-color: #B82025;
+    }
+    .cards:nth-last-child(2) {
+      background-color: #20313F;
+    }
+  }
+</style>
+<div class="grid grid-cols-1 sm:grid-cols-2">
+  <!-- Primera fila -->
+  <div class="cards bg-1 flex flex-col items-center justify-center gap-8 p-6 w-full h-auto text-center">
+    <h2 class="text-3xl sm:text-6xl font-bold leading-tight">The Governance Beat</h2>
+    <p class="text-xl sm:text-3xl">Voice of the in-house practitioner</p>
+    <button class="font-bold border-2 p-3 sm:p-4 bg-white text-black w-40 sm:w-48 bg-white text-black w-40 sm:w-48 hover:bg-transparent hover:text-white hover:border-4 hover:border-white transition-all duration-500 ease-out">
+      Visit the blog >
+    </button>
+  </div>
+
+  <div class="cards bg-2 flex flex-col items-center justify-center gap-5 p-6 w-full h-auto text-center">
+    <img class="h-16 w-16 sm:h-20 sm:w-20" src="/foco.png" alt="">
+    <p class="text-boxes text-center p-6 sm:p-8 text-xl sm:text-2xl">Cooley Launches IPO GO</p>
+    <button class="font-bold border-2 p-3 sm:p-4 bg-white text-black w-40 sm:w-48 bg-white text-black w-40 sm:w-48 hover:bg-transparent hover:text-white hover:border-4 hover:border-white transition-all duration-500 ease-out">
+      Read more >
+    </button>
+  </div>
+
+  <div class="cards bg-1 flex flex-col items-center justify-center gap-3 p-6 w-full h-auto text-center">
+    <img class="h-20 w-20 sm:h-20 sm:w-20" src="/document.png" alt="">
+    <p class="text-center p-6 sm:p-8 w-full sm:w-3/4 text-2xl sm:text-4xl">Poppi Announces $1.95 Billion Sale to PepsiCo</p>
+    <button class="font-bold border-2 p-3 sm:p-4 bg-white text-black w-40 sm:w-48 bg-white text-black w-40 sm:w-48 hover:bg-transparent hover:text-white hover:border-4 hover:border-white transition-all duration-500 ease-out">
+      Read more >
+    </button>
+  </div>
+  
+  <div class="cards bg-2 flex flex-col items-center justify-center gap-5">
+    <h2 class="text-7xl">Cooley GO</h2>
+    <p class="text-2xl text-center">Start and build your business</p>
+    <button class="font-bold border-2 p-3 sm:p-4 bg-white text-black w-40 sm:w-48 bg-white text-black w-40 sm:w-48 hover:bg-transparent hover:text-white hover:border-4 hover:border-white transition-all duration-500 ease-out">
+      Let's go >
+    </button>
+  </div>
+</div>
+<section class="bg-blue-900">
+  <div class="flex flex-col text-center pt-20 gap-7 items-center justify-center ">
+    <h2 class="text-4xl font-bold">Online payments portal</h2>
+    <p class="whitespace-normal w-96 text-center">Cooley offers our US clients the ability to pay invoices online via a secure payment portal. Payments can be submitted by electronic check or credit card.</p>
+    <p class="whitespace-normal w-96 text-center">For assistance with this payment portal, please contact Cooley’s Accounts Receivable Team at +1 415 693 2794 or ar@cooley.com</p>
+    <button class="bg-white text-black border p-4 w-48 font-bold mb-20 bg-white text-black w-40 sm:w-48 hover:bg-transparent hover:text-white hover:border-4 hover:border-white transition-all duration-500 ease-out">
+      Visit the portal >
+    </button>
+  </div>
+</section>
+<section class="bg-2">
+  <div class="text-white flex flex-col items-center justify-center pt-12 sm:pt-20 text-center font-bold gap-4 sm:gap-5">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl">Global services to support <br> your business</h2>
+    <a href="/">
+      <p class="mb-10 sm:mb-20 text-lg sm:text-xl">See our teams ></p>
+    </a>
+  </div>
+</section>
+<section class="bg-1">
+  <div class="flex flex-col items-center sm:flex-row justify-center gap-4 sm:gap-5 pt-6 sm:pt-8">
+    <h2 class="text-3xl text-center sm:text-3xl font-bold mb-6 sm:mb-8">Want to receive alerts from Cooley?</h2>
+    <button class="bg-white text-black border p-2 w-32 sm:w-36 font-bold mb-6 sm:mb-8 bg-white text-black w-40 sm:w-48 hover:bg-transparent hover:text-white hover:border-4 hover:border-white transition-all duration-500 ease-out">Sign up ></button>
+  </div>
+</section>

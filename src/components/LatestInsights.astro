@@ -1,0 +1,109 @@
+<section class="w-full bg-white text-black">
+  <div class="p-6 flex justify-between items-center">
+    <h2 class="text-4xl font-bold fade-in">Latest insights</h2>
+    <a href="/">
+      <p class="font-bold fade-in delay-100">View All ></p>
+    </a>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-6 gap-5">
+    <div class="fade-in delay-200 article">
+      <a href="/">
+        <h3 class="font-bold text-2xl underline-hover delay-200">
+          Will an opt-in mechanism resolve the melee over Delaware’s controversial SB 21? >
+        </h3>
+        <p class="pt-6">Blog March 25, 2025</p>
+      </a>
+    </div>
+    <div class="fade-in delay-400 article">
+      <a href="/">
+        <h3 class="font-bold text-2xl underline-hover delay-400">
+          Annual Meetings: Scenario Planning for Surprises >
+        </h3>
+        <p class="pt-6">Blog March 25, 2025</p>
+      </a>
+    </div>
+    <div class="fade-in delay-600 article">
+      <a href="/">
+        <h3 class="font-bold text-2xl underline-hover delay-600">
+          New Executive Order Will Consolidate Federal Agency Procurement Functions in the General Services Administration >
+        </h3>
+        <p class="pt-6">Alert March 25, 2025</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .delay-100 { transition-delay: 0.1s; }
+  .delay-200 { transition-delay: 0.2s; }
+  .delay-400 { transition-delay: 0.4s; }
+  .delay-600 { transition-delay: 0.6s; }
+
+  .underline-hover {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .underline-hover::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease-out;
+  }
+
+  .underline-hover:hover::after {
+    width: 100%;
+  }
+
+  .underline-hover.delay-200::after {
+    transition-delay: 0.2s;
+  }
+  .underline-hover.delay-400::after {
+    transition-delay: 0.4s;
+  }
+  .underline-hover.delay-600::after {
+    transition-delay: 0.6s;
+  }
+
+  .article {
+    padding-bottom: 20px; 
+  }
+
+  @media (max-width: 640px) {
+    .article {
+      border-bottom: 2px solid #D1D5DB; 
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
